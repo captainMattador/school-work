@@ -46,14 +46,14 @@ public:
     
     ElementType valueAtIndex(int pos);
     /*--------------------------------------------------------------------
-     Display the contensts of this LinkedList.
+     Finds and returns data at a specific position
      Precondition:  Requires int pos which is the position of a desired node
      Postcondition: Returns the data of a particular node to the calling user.
      --------------------------------------------------------------------*/
     
     void findSublists(ElementType startData, ElementType endData);
     /*--------------------------------------------------------------------
-     Display the contensts of this LinkedList.
+     Finds and displays the Sublists in the linkedList that match startData and endData.
      Precondition:  Expects ElementType startData and ElementType endData representing
                     the start and the end of the substring
      Postcondition: Prints all found substrings to the console as well as the 

@@ -1,16 +1,15 @@
 
 /*--------------------------------------------------------------------
- Title: Assignment 1 - Linked Lists - Bozelka
+ Title: Lab 1 - Linked Lists - Bozelka
  File: Header for LinkedList
- Abstract: This assigment adds a few methods to the linked
-           list which allow a user to search and test for substrings
-           starting with an A and ending with a B. The program then
-           outputs those substring to the screen and counts how many
-           total substrings were found.
+ Abstract: This lab builds on to a supplied linked list adding methods
+           to find and return the maximum value stored in the linked
+           list and another method to determine if the linked list
+           is in ascending order
  Author: Matthew Bozelka
  ID: 002276039
  Date: 01/10/2016
- --------------------------------------------------------------------*/
+--------------------------------------------------------------------*/
 
 //----- LinkedList.h -----
 #ifndef LINKEDLIST
@@ -19,7 +18,7 @@
 #include <iostream>
 using namespace std;
 
-typedef char ElementType;
+typedef int ElementType;
 
 class LinkedList
 {
@@ -28,7 +27,8 @@ public:
     ~LinkedList();  // destructor
     LinkedList(const LinkedList & original); //copy constructor
     void insert(ElementType item, int pos);
-    void erase(int pos);
+    void insertnew(ElementType item, int pos);
+    void erase(ElementType item);
     
     void display(ostream & out) const;
     /*--------------------------------------------------------------------
@@ -37,27 +37,19 @@ public:
      Postcondition: Elements of this LinkedList have been output to out.
      --------------------------------------------------------------------*/
     
-    int size();
+    ElementType maxItem();
     /*--------------------------------------------------------------------
-     Returns the size of the LinkedList
-     Precondition: Requires no arguments
-     Postcondition: returns the size of the LinkedList to the calling user
+     Added function for the lab.
+     Precondition: takes no paramaters
+     Postcondition: returns the data of the max item in the LinkedList
      --------------------------------------------------------------------*/
     
-    ElementType valueAtIndex(int pos);
+    bool isAscendingOrder();
     /*--------------------------------------------------------------------
-     Display the contensts of this LinkedList.
-     Precondition:  Requires int pos which is the position of a desired node
-     Postcondition: Returns the data of a particular node to the calling user.
-     --------------------------------------------------------------------*/
-    
-    void findSubstrings(char startLetter, char endLetter);
-    /*--------------------------------------------------------------------
-     Display the contensts of this LinkedList.
-     Precondition:  Expects char startLetter and char endletter representing 
-                    the start and the end of the substring
-     Postcondition: Prints all found substrings to the console as well as the 
-                    count of substrings
+     Added function for the lab.
+     Precondition: takes no paramaters
+     Postcondition: returns true if the list is in ascending order
+     and false if not.
      --------------------------------------------------------------------*/
     
 private:

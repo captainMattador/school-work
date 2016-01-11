@@ -29,13 +29,7 @@ void storeInput(string input, LinkedList & list);
 
 int main()
 {
-    // consts to quickly change the letters being searched for
-    // in sub strings
-    const char START_LETTER = 'A';
-    const char END_LETTER = 'B';
-    
-    int listSize;                      // size of user entered Linked List
-    int totalSubStr = 0;               // total sub strings found
+
     string userInput;
     LinkedList userIntputAsList;
     
@@ -51,34 +45,7 @@ int main()
     userIntputAsList.display(cout);
     cout << endl << endl;
     
-    listSize = userIntputAsList.size();
-    totalSubStr = 0;
-    
-    // begin loop of string
-    for(int i = 0; i < listSize; i++)
-    {
-        
-        // skip loop if not the START_LETTER
-        if(userIntputAsList.valueAtIndex(i) != START_LETTER)
-            continue;
-        
-        string subStr = "";
-        
-        for(int k = 0; k < listSize - i; k++)
-        {
-            char curLetter = userIntputAsList.valueAtIndex(i + k);
-            subStr += curLetter;
-            
-            if(curLetter == END_LETTER)
-            {
-                totalSubStr++;
-                cout << "Substring " << totalSubStr << ": " << subStr << endl;
-            }
-            
-        }
-    }
-    
-    cout << "Total " << totalSubStr << " substrings" << endl;
+    userIntputAsList.findSubstrings('A', 'B');
     
 }
 

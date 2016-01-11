@@ -25,7 +25,7 @@ using namespace std;
                     then stores into the referenced list
  
 */
-void storeInput(string input, LinkedList & list);
+void storeInputInList(string input, LinkedList & list);
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
     getline(cin, userInput);
     
     // store the text entered by user into the LinkedList
-    storeInput(userInput, userIntputAsList);
+    storeInputInList(userInput, userIntputAsList);
     
     // print LinkedList to screen for test
     cout << "LinkedList based on user input\n";
@@ -51,7 +51,7 @@ int main()
 
 
 // helper function
-void storeInput(string input, LinkedList & list)
+void storeInputInList(string input, LinkedList & list)
 {
     int index = 0;
     for (char c : input)

@@ -180,7 +180,6 @@ void LinkedList::findSubstrings(char startLetter, char endLetter)
             continue;
         }
         
-        
         string subStr = "";
         innerCurrent = outerCurrent;
         
@@ -189,16 +188,12 @@ void LinkedList::findSubstrings(char startLetter, char endLetter)
             subStr += innerCurrent->data;
             
             if(innerCurrent->data == endLetter)
-            {
-                totalSubStr++;
-                cout << "Substring " << totalSubStr << ": " << subStr << endl;
-            }
+                cout << "Substring " << ++totalSubStr << ": " << subStr << endl;
             
             innerCurrent = innerCurrent->next;
         }
         
         outerCurrent = outerCurrent->next;
-        
     }
     
     cout << "Total " << totalSubStr << " substrings" << endl;

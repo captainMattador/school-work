@@ -160,7 +160,7 @@ ElementType LinkedList::valueAtIndex(int pos)
 
 
 //-- Added method - Definition of findSubstrings(char startLetter, char endLetter)
-void LinkedList::findSubstrings(char startLetter, char endLetter)
+void LinkedList::findSublists(ElementType startData, ElementType endData)
 {
     
     // return early if no items
@@ -174,7 +174,7 @@ void LinkedList::findSubstrings(char startLetter, char endLetter)
     {
         
         // skip loop if not the startLetter
-        if(outerCurrent->data != startLetter)
+        if(outerCurrent->data != startData)
         {
             outerCurrent = outerCurrent->next;
             continue;
@@ -187,7 +187,7 @@ void LinkedList::findSubstrings(char startLetter, char endLetter)
         {
             subStr += innerCurrent->data;
             
-            if(innerCurrent->data == endLetter)
+            if(innerCurrent->data == endData)
                 cout << "Substring " << ++totalSubStr << ": " << subStr << endl;
             
             innerCurrent = innerCurrent->next;

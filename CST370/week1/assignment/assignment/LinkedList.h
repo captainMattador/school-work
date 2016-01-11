@@ -51,10 +51,10 @@ public:
      Postcondition: Returns the data of a particular node to the calling user.
      --------------------------------------------------------------------*/
     
-    void findSubstrings(char startLetter, char endLetter);
+    void findSublists(ElementType startData, ElementType endData);
     /*--------------------------------------------------------------------
      Display the contensts of this LinkedList.
-     Precondition:  Expects char startLetter and char endletter representing 
+     Precondition:  Expects ElementType startData and ElementType endData representing
                     the start and the end of the substring
      Postcondition: Prints all found substrings to the console as well as the 
                     count of substrings

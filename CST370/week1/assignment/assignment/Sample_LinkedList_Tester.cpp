@@ -40,12 +40,12 @@ int main()
     // store the text entered by user into the LinkedList
     storeInputInList(userInput, userIntputAsList);
     
-    // print LinkedList to screen for test
+    // print LinkedList to screen for testing
     cout << "LinkedList based on user input\n";
     userIntputAsList.display(cout);
     cout << endl << endl;
     
-    userIntputAsList.findSubstrings('A', 'B');
+    userIntputAsList.findSublists('A', 'B');
     
 }
 

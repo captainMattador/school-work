@@ -1,11 +1,11 @@
+
 /*--------------------------------------------------------------------
- Title: Assignment 1 - Linked Lists - Bozelka
- File: Header for LinkedList
- Abstract: This assigment adds a few methods to the linked
-           list which allow a user to search and test for substrings
-           starting with an A and ending with a B. The program then
-           outputs those substring to the screen and counts how many
-           total substrings were found.
+ Title: Lab 1 - Linked Lists - Bozelka
+ File: .cpp for LinkedList
+ Abstract: This lab builds on to a supplied linked list adding methods
+           to find and return the maximum value stored in the linked
+           list and another method to determine if the linked list
+           is in ascending order
  Author: Matthew Bozelka
  ID: 002276039
  Date: 01/10/2016
@@ -129,73 +129,56 @@ void LinkedList::display(ostream & out) const
 }
 
 
-
-//-- Added method - Definition of size()
-int LinkedList::size()
+/*
+ Added method to determine what the maximum data element is.
+ It returns that element
+ */
+ElementType LinkedList::maxItem()
 {
-    return mySize;
-}
-
-
-
-//-- Added method - Definition of nodeAtIndex(int)
-ElementType LinkedList::valueAtIndex(int pos)
-{
-    if (pos < 0 || pos >= mySize)
-    {
-        cerr << "Illegal location to Access -- " << pos << endl;
-        return NULL;
-    }
     
+    ElementType maxData = -1;
     Node * current = first;
     
-    for(int i = 0; i < pos; i++)
+    if (mySize == 0 || first == 0)
     {
+        cerr << "Error: There are no elements in the list." << endl;
+        return maxData;
+    }
+    
+    while(current != 0)
+    {
+        
+        if(current->data > maxData)
+            maxData = current->data;
+        
         current = current->next;
     }
-    
-    return current->data;
+
+    return maxData;
 }
 
 
-
-//-- Added method - Definition of findSublists(ElementType startData, ElementType endData)
-void LinkedList::findSublists(ElementType startData, ElementType endData)
+/*
+ Added method to determine if list is in ascending order
+*/
+bool LinkedList::isAscendingOrder()
 {
     
-    // return early if no items
-    if(mySize == 0 || first == 0)
-        return;
+    if (mySize == 0 || first == 0)
+        return true;
     
-    int totalSubStr = 0;
-    Node * outerCurrent = first, * innerCurrent = nullptr;
+    Node * current = first;
+    ElementType size = 0;
     
-    for(int i = 0; i < mySize; i++)
+    while (current != 0)
     {
+        if(current->data < size)
+            return false;
         
-        // skip loop if not the startLetter
-        if(outerCurrent->data != startData)
-        {
-            outerCurrent = outerCurrent->next;
-            continue;
-        }
-        
-        string subStr = "";
-        innerCurrent = outerCurrent;
-        
-        for(int k = 0; k < mySize - i; k++)
-        {
-            subStr += innerCurrent->data;
-            
-            if(innerCurrent->data == endData)
-                cout << "Substring " << ++totalSubStr << ": " << subStr << endl;
-            
-            innerCurrent = innerCurrent->next;
-        }
-        
-        outerCurrent = outerCurrent->next;
+        size = current->data;
+        current = current->next;
     }
-    
-    cout << "Total " << totalSubStr << " substrings" << endl;
-
+  
+    return true;
 }
+

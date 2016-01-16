@@ -36,7 +36,7 @@ int main()
     cout << "Max Item: " << max << endl << endl;
     
     // test of maxItem with one in list
-    intList.insert(100, 0);
+    intList.insert(-100, 0);
     cout << "Current List: ";
     intList.display(cout);
     cout << endl;
@@ -45,7 +45,7 @@ int main()
     cout << "Max Item: " << max << endl << endl;
     
     // test of maxItem with two in list
-    intList.insert(200, 0);
+    intList.insert(-5, 0);
     cout << "Current List: ";
     intList.display(cout);
     cout << endl;
@@ -54,9 +54,9 @@ int main()
     cout << "Max Item: " << max << endl << endl;
     
     // test of maxItem with many in list
-    intList.insert(400, 1);
-    intList.insert(150, 0);
-    intList.insert(350, 4);
+    intList.insert(-400, 1);
+    intList.insert(-150, 0);
+    intList.insert(-350, 4);
     cout << "Current List: ";
     intList.display(cout);
     cout << endl;
@@ -82,7 +82,7 @@ int main()
     cout << "Ascending in order: " << ((isAscendingOrder) ? "True." : "False.") << endl << endl;
     
     // testing of ascending order for one it list
-    intList.insert(100, 0);
+    intList.insert(-100, 0);
     cout << "One in list test:\nCurrent List: ";
     intList.display(cout);
     cout << endl;

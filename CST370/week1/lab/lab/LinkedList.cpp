@@ -136,14 +136,16 @@ void LinkedList::display(ostream & out) const
 ElementType LinkedList::maxItem()
 {
     
-    ElementType maxData = -1;
     Node * current = first;
+    ElementType maxData;
     
     if (mySize == 0 || first == 0)
     {
         cerr << "Error: There are no elements in the list." << endl;
-        return maxData;
+        return -1;
     }
+    
+    maxData = current->data;
     
     while(current != 0)
     {
@@ -168,7 +170,7 @@ bool LinkedList::isAscendingOrder()
         return true;
     
     Node * current = first;
-    ElementType size = 0;
+    ElementType size = current->data;
     
     while (current != 0)
     {

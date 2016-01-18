@@ -1,3 +1,15 @@
+
+/*--------------------------------------------------------------------
+ Title: Lab 2 Part B - Stacks - Bozelka
+ File: Implementation of Stack class
+ Abstract: This portion of the Lab uses a Stack of ints, and asks a user
+ for a positive initger. The Positive integer is the converted to a
+ binary representation and outputed to the screen.
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 01/18/2016
+ --------------------------------------------------------------------*/
+
 /*-- Stack.cpp-------------------------------------------------------------
  This file implements Stack member functions.
  --------------------------------------------------------------------------*/

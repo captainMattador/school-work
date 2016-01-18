@@ -1,6 +1,13 @@
-/*---------------------------------------------------------------------
- Driver program to test the Stack class.
- ----------------------------------------------------------------------*/
+/*--------------------------------------------------------------------
+ Title: Assignment 2 - Programming Assignment (Stacks) - Bozelka
+ File: main test for week 2 Programming Assignment
+ Abstract: This programming assignment uses two stacks to assort
+ one of the stacks items into ascending order. The end of the 
+ process should make the assorted stacks top item the largest value.
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 01/18/2016
+ --------------------------------------------------------------------*/
 
 #include <iostream>
 using namespace std;
@@ -72,6 +79,12 @@ void sortStack(Stack & stack1, Stack & stack2)
 
 void displayStack(Stack & stack)
 {
+    if(stack.empty())
+    {
+        cout << "No items in stack" << endl;
+        return;
+    }
+    
     while (!stack.empty()) {
         cout << stack.top();
         stack.pop();

@@ -1,3 +1,15 @@
+
+/*--------------------------------------------------------------------
+ Title: Assignment 2 - Programming Assignment (Stacks) - Bozelka
+ File: header file for Stack class
+ Abstract: This programming assignment uses two stacks to assort
+ one of the stacks items into ascending order. The end of the
+ process should make the assorted stacks top item the largest value.
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 01/18/2016
+ --------------------------------------------------------------------*/
+
 /*-- Stack.h ---------------------------------------------------------------
  
  This header file defines a Stack data type.

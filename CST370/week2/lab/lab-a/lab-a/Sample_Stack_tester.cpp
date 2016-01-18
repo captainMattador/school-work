@@ -1,6 +1,14 @@
-/*---------------------------------------------------------------------
- Driver program to test the Stack class.
- ----------------------------------------------------------------------*/
+/*--------------------------------------------------------------------
+ Title: Lab 2 Part A - Stacks - Bozelka
+ File: main test for week 2 Lab Part A
+ Abstract: This portion of the Lab uses a Stack of Chars, to store
+ the input of some text from the user. The driver then prints the
+ User input backwards by utilizing the Stacks Last-In-First-Out
+ mechanism.
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 01/18/2016
+ --------------------------------------------------------------------*/
 
 #include <iostream>
 using namespace std;
@@ -9,13 +17,10 @@ using namespace std;
 
 /*
  helper function:
- pre condiction: expects a string, and a reference to a linked list
- post condition: makes all chars in the string uppercase and removes spaces.
- then stores into the referenced list
- 
+ pre condiction: expects a string named input, and a reference to a stack named stack
+ post condition: Stores each char in input into the Stack stack.
  */
 void storeInputInStack(string input, Stack & stack);
-void reverseStack(Stack & stack);
 
 int main()
 {

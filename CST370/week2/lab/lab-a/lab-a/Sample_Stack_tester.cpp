@@ -26,7 +26,6 @@ int main()
 {
     Stack stack;
     string userInput, reversed = "";
-    cout << "Stack created.  Empty? " << boolalpha << stack.empty() << endl;
     
     // get a line of text from user
     cout << "Enter a string of characters => ";
@@ -40,7 +39,7 @@ int main()
         reversed += stack.top();
         stack.pop();
     }
-    cout << "Reverse is " << reversed << endl;
+    cout << "Reverse is: " << reversed << endl;
     
 }
 

@@ -24,35 +24,37 @@ int main()
     /***************
      testing stack one
      ***************/
-    stack1.push(1);
-    stack1.push(5);
-    stack1.push(3);
-    stack1.push(-3);
-    stack1.push(4);
-    stack1.push(8);
-    stack1.push(10);
-    stack1.push(-5);
+//    stack1.push(1);
+//    stack1.push(5);
+//    stack1.push(3);
+//    stack1.push(-3);
+//    stack1.push(4);
+//    stack1.push(8);
+//    stack1.push(10);
+//    stack1.push(-5);
     
     /***************
      testing stack two
      ***************/
-//    stack1.push(10);
-//    stack1.push(-1);
-//    stack1.push(-5);
+//    stack1.push(1);
+//    stack1.push(5);
 //    stack1.push(-4);
-//    stack1.push(-6);
+//    stack1.push(6);
 //    stack1.push(-2);
     
     
     /***************
      testing stack three
      ***************/
-//    stack1.push(-1);
-//    stack1.push(-4);
-//    stack1.push(-4);
-//    stack1.push(6);
-//    stack1.push(6);
-//    stack1.push(9);
+    stack1.push(-1);
+    stack1.push(-4);
+    stack1.push(-4);
+    stack1.push(6);
+    stack1.push(6);
+    stack1.push(9);
+    
+    cout << "Unsorted Stack: \n";
+    stack1.display(cout);
     
     sortStack(stack1, stack2);
     

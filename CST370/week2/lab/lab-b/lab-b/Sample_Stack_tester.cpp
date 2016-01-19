@@ -48,7 +48,7 @@ int main()
             cout << "\nBad Input (try again)\n";
         }
     }while(posInteger <= 0);
-    
+        
     cout << "Decimal: " << posInteger << endl;
     
     storeStack(posInteger, stack);

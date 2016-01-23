@@ -1,0 +1,2 @@
+This part is the beginning. {This part is the footnote.} This part is the end.
+This part is the beginning. {Another one} This part is the end.

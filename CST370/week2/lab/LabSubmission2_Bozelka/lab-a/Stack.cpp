@@ -1,10 +1,11 @@
 
 /*--------------------------------------------------------------------
- Title: Lab 2 Part B - Stacks - Bozelka
- File: Implementation of Stack class
- Abstract: This portion of the Lab uses a Stack of ints, and asks a user
- for a positive initger. The Positive integer is the converted to a
- binary representation and outputed to the screen.
+ Title: Lab 2 Part A - Stacks - Bozelka
+ File: implementation of Stack class
+ Abstract: This portion of the Lab uses a Stack of Chars, to store
+ the input of some text from the user. The driver then prints the
+ User input backwards by utilizing the Stacks Last-In-First-Out
+ mechanism.
  Author: Matthew Bozelka
  ID: 002276039
  Date: 01/18/2016
@@ -50,8 +51,7 @@ void Stack::push(const StackElement & value)
 void Stack::display(ostream & out) const
 {
     for (int i = myTop; i >= 0; i--)
-        out << myArray[i];
-    cout << endl;
+        out << myArray[i] << endl;
 }
 
 //--- Definition of top()

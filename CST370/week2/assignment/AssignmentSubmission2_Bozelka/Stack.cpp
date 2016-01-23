@@ -1,10 +1,10 @@
 
 /*--------------------------------------------------------------------
- Title: Lab 2 Part B - Stacks - Bozelka
- File: Implementation of Stack class
- Abstract: This portion of the Lab uses a Stack of ints, and asks a user
- for a positive initger. The Positive integer is the converted to a
- binary representation and outputed to the screen.
+ Title: Assignment 2 - Programming Assignment (Stacks) - Bozelka
+ File: implementation file for Stack class
+ Abstract: This programming assignment uses two stacks to assort
+ one of the stacks items into ascending order. The end of the
+ process should make the assorted stacks top item the largest value.
  Author: Matthew Bozelka
  ID: 002276039
  Date: 01/18/2016
@@ -50,8 +50,7 @@ void Stack::push(const StackElement & value)
 void Stack::display(ostream & out) const
 {
     for (int i = myTop; i >= 0; i--)
-        out << myArray[i];
-    cout << endl;
+        out << myArray[i] << endl;
 }
 
 //--- Definition of top()

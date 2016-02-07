@@ -1,10 +1,25 @@
 
+/*--------------------------------------------------------------------
+ Title: Programming Assignment 5 - (Sorting Algorithms) - Bozelka
+ File: Driver for the Assignment
+ Abstract: In this assignment the sorting algorithm selction sort
+ is examined. In part a of the assignment a simple selection sort
+ algo is created. In part two that algo is modified to only sort
+ 0 - k elements, where k is a positive integer entered by the user.
+ In part 3 the modified sort is used to obtain the median of an array,
+ where k is half the size of the array (since only have the array needs
+ to be sorted to obtain the median).
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 02/07/2016
+ --------------------------------------------------------------------*/
+
 #include <iostream>
 using namespace std;
 
 
 void SelectionSort(int arr[], int size); // part a of assignment
-void SelectionSortPartB(int arr[], int arrSize, int sortSection); // part b of assignment
+int SelectionSortPartB(int arr[], int arrSize, int sortSectionSize); // part b of assignment
 double median(int arr[], int size);
 void printArray(int arr[], int size);
 
@@ -13,8 +28,8 @@ int main(int argc, const char * argv[]) {
     
     int selectionSortArrPartA[10] = {4, 6, 8, 15, 20, 22, 10, 3, 9, 2};
     int selectionSortArrPartB[10] = {4, 6, 8, 15, 20, 22, 10, 3, 9, 2};
-    int selectionSortArrPartC[6] = {4, 6, 8, 15, 20, 22};
-    int userInput;
+    int selectionSortArrPartC[6] = {22, 6, 15, 8, 20, 4};
+    int userInputSize;
     double getMedian;
     
     
@@ -35,29 +50,29 @@ int main(int argc, const char * argv[]) {
      *****************************************/
     do{
         cout << "Enter an integer >= 0: ";
-        cin >> userInput;
+        cin >> userInputSize;
         cin.clear();
         cin.ignore(10000, '\n');
         
-        if(userInput <= 0)
+        if(userInputSize <= 0)
             cout << "\nBad Input (try again)\n";
-    }while(userInput <= 0);
+    }while(userInputSize <= 0);
     
     cout << "Selection sort Part B unsorted\n";
     printArray(selectionSortArrPartB, 10);
     
-    SelectionSortPartB(selectionSortArrPartB, 10, userInput);
+    userInputSize = SelectionSortPartB(selectionSortArrPartB, 10, userInputSize);
     
     cout << "Selection sort Part B sorted\n";
-    printArray(selectionSortArrPartB, userInput);
+    printArray(selectionSortArrPartB, userInputSize);
     
     
     /******************************************
      Part C Driver
      *****************************************/
-    getMedian = median(selectionSortArrPartC, 6);
-    
     cout << "Part C array unsorted: \n";
+    printArray(selectionSortArrPartC, 6);
+    getMedian = median(selectionSortArrPartC, 6);
     cout << "Median for part C array is: \n";
     cout << getMedian << endl << endl;
     
@@ -95,15 +110,19 @@ void SelectionSort(int arr[], int size)
 
 /*
     PART B selection sort
+    modified to sort only 0 -k elements
+    in an array.
  */
-void SelectionSortPartB(int arr[], int arrSize, int sortSection)
+int SelectionSortPartB(int arr[], int arrSize, int sortSectionSize)
 {
     
-    if(sortSection > arrSize)
-        sortSection = arrSize;
-
+    if(sortSectionSize > arrSize || sortSectionSize < 0)
+    {
+        cout << "K is out of bounds. The whole array will be sorted.\n\n";
+        sortSectionSize = arrSize;
+    }
     
-    for(int i = 0; i < sortSection; i++)
+    for(int i = 0; i < sortSectionSize; i++)
     {
         int swapIndex = i;
         
@@ -120,10 +139,13 @@ void SelectionSortPartB(int arr[], int arrSize, int sortSection)
             arr[i] = temp;
         }
     }
+    
+    return sortSectionSize;
 }
 
 
 /*
+  PART C median
   returns the median of an array
   sorts the array in half first
 */

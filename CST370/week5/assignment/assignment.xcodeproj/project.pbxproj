@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4CDB9A61C6463BB0042BA72 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4CDB9A51C6463BB0042BA72 /* main.cpp */; };
+		E4CDB9A61C6463BB0042BA72 /* assignment-5-driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4CDB9A51C6463BB0042BA72 /* assignment-5-driver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E4CDB9A21C6463BB0042BA72 /* assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = assignment; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4CDB9A51C6463BB0042BA72 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E4CDB9A51C6463BB0042BA72 /* assignment-5-driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "assignment-5-driver.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		E4CDB9A41C6463BB0042BA72 /* assignment */ = {
 			isa = PBXGroup;
 			children = (
-				E4CDB9A51C6463BB0042BA72 /* main.cpp */,
+				E4CDB9A51C6463BB0042BA72 /* assignment-5-driver.cpp */,
 			);
 			path = assignment;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CDB9A61C6463BB0042BA72 /* main.cpp in Sources */,
+				E4CDB9A61C6463BB0042BA72 /* assignment-5-driver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +237,7 @@
 				E4CDB9AB1C6463BB0042BA72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

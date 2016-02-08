@@ -20,7 +20,7 @@ using namespace std;
 
 void SelectionSort(int arr[], int size); // part a of assignment
 int SelectionSortPartB(int arr[], int arrSize, int sortSectionSize); // part b of assignment
-double median(int arr[], int size);
+double median(int arr[], int size); // partc of assignment
 void printArray(int arr[], int size);
 
 

@@ -21,14 +21,14 @@ using namespace std;
 void SelectionSort(int arr[], int size); // part a of assignment
 int SelectionSortPartB(int arr[], int arrSize, int sortSectionSize); // part b of assignment
 double median(int arr[], int size); // partc of assignment
-void printArray(int arr[], int size);
+void printArray(int arr[], int size); // helper function to print arrays
 
 
 int main(int argc, const char * argv[]) {
     
     int selectionSortArrPartA[10] = {4, 6, 8, 15, 20, 22, 10, 3, 9, 2};
     int selectionSortArrPartB[10] = {4, 6, 8, 15, 20, 22, 10, 3, 9, 2};
-    int selectionSortArrPartC[6] = {22, 6, 15, 8, 20, 4};
+    int selectionSortArrPartC[7] = {22, 6, 15, 8, 20, 4, -9};
     int userInputSize;
     double getMedian;
     
@@ -71,8 +71,8 @@ int main(int argc, const char * argv[]) {
      Part C Driver
      *****************************************/
     cout << "Part C array unsorted: \n";
-    printArray(selectionSortArrPartC, 6);
-    getMedian = median(selectionSortArrPartC, 6);
+    printArray(selectionSortArrPartC, 7);
+    getMedian = median(selectionSortArrPartC, 7);
     cout << "Median for part C array is: \n";
     cout << getMedian << endl << endl;
     

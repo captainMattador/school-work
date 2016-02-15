@@ -1,15 +1,77 @@
-//
-//  main.cpp
-//  assignment
-//
-//  Created by Matthew Bozelka on 2/12/16.
-//  Copyright © 2016 Matthew Bozelka. All rights reserved.
-//
+/*--------------------------------------------------------------------
+ Title: Lab 6 - Programming Assignment (Sorting Algorithm 2) - Bozelka
+ File: Driver for the Assignment
+ Abstract: In this assignment a new algorithm called CoolSort is used.
+ In the algorithm a sequences is supplied and used to break an array
+ into smaller subsets that get sorted first. by the final sequence
+ the entire array will be sorted.
+ Author: Matthew Bozelka
+ ID: 002276039
+ Date: 02/12/2016
+ --------------------------------------------------------------------*/
+
 
 #include <iostream>
+using namespace std;
+
+void CoolSort(int arr[], int arrSize, int sequence[], int sequenceSize);
+void printArray(int arr[], int size);
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    const int ARRAY_SIZE = 12;
+    const int SEQUENCE_SIZE = 3;
+    
+    int H[SEQUENCE_SIZE] = {5, 3, 1};
+    int sortArr[ARRAY_SIZE] = {62, 83, 18, 53, 07, 17, 95, 86, 47, 69, 25, 28};
+    
+    cout << "Unsorted Array:\n";
+    printArray(sortArr, ARRAY_SIZE);
+    
+    CoolSort(sortArr, ARRAY_SIZE, H, SEQUENCE_SIZE);
+    
+    //printArray(sortArr, ARRAY_SIZE);
+    
     return 0;
+}
+
+
+
+void CoolSort(int arr[], int arrSize, int sequence[], int sequenceSize)
+{
+    
+    for(int i = 0; i < sequenceSize; i++)
+    {
+        for(int j = 0; j < sequence[i]; j++){
+            
+            for(int k = j; k < arrSize; k += sequence[i]){
+                
+                int value = arr[k];
+                int hole = k;
+                
+                while(hole > j && arr[hole - sequence[i]] > value)
+                {
+                    arr[hole] = arr[hole - sequence[i]];
+                    hole = hole - sequence[i];
+                }
+                arr[hole] = value;
+            }
+            
+        }
+        cout << "Sort after Sequence " << sequence[i] << ":\n";
+        printArray(arr, arrSize);
+    }
+    
+}
+
+
+/*
+ helper function to print the array
+ */
+void printArray(int arr[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        cout << arr[i] << ((i == size -1) ? "\n\n" : ", ");
+    }
 }

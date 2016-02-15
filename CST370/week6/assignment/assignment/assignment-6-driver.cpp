@@ -19,18 +19,18 @@ void printArray(int arr[], int size);
 
 int main(int argc, const char * argv[]) {
 
-    const int ARRAY_SIZE = 12;
+    const int ARRAY_SIZE = 10;
     const int SEQUENCE_SIZE = 3;
     
-    int H[SEQUENCE_SIZE] = {5, 3, 1};
-    int sortArr[ARRAY_SIZE] = {62, 83, 18, 53, 07, 17, 95, 86, 47, 69, 25, 28};
+    int H[SEQUENCE_SIZE] = {5, 2, 1};
+    int sortArr[ARRAY_SIZE] = {2, 5, 9, 4, 10, 7, 8, 1, 11, 5};
     
     cout << "Unsorted Array:\n";
     printArray(sortArr, ARRAY_SIZE);
     
     CoolSort(sortArr, ARRAY_SIZE, H, SEQUENCE_SIZE);
     
-    //printArray(sortArr, ARRAY_SIZE);
+    printArray(sortArr, ARRAY_SIZE);
     
     return 0;
 }
@@ -60,8 +60,8 @@ void CoolSort(int arr[], int arrSize, int sequence[], int sequenceSize)
         }
         
         // prints the array after each sort to show it is working correctly
-        cout << "Sort after Sequence " << sequence[i] << ":\n";
-        printArray(arr, arrSize);
+        //cout << "Sort after Sequence " << sequence[i] << ":\n";
+        //printArray(arr, arrSize);
     }
     
 }

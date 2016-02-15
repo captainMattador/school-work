@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E41BD29D1C6EE9E400BB4B4C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41BD29C1C6EE9E400BB4B4C /* main.cpp */; };
+		E41BD29D1C6EE9E400BB4B4C /* lab-6-driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41BD29C1C6EE9E400BB4B4C /* lab-6-driver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E41BD2991C6EE9E400BB4B4C /* lab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41BD29C1C6EE9E400BB4B4C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E41BD29C1C6EE9E400BB4B4C /* lab-6-driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "lab-6-driver.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		E41BD29B1C6EE9E400BB4B4C /* lab */ = {
 			isa = PBXGroup;
 			children = (
-				E41BD29C1C6EE9E400BB4B4C /* main.cpp */,
+				E41BD29C1C6EE9E400BB4B4C /* lab-6-driver.cpp */,
 			);
 			path = lab;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41BD29D1C6EE9E400BB4B4C /* main.cpp in Sources */,
+				E41BD29D1C6EE9E400BB4B4C /* lab-6-driver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +237,7 @@
 				E41BD2A21C6EE9E400BB4B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

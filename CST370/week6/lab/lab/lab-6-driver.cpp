@@ -24,28 +24,40 @@ void printArray(int arr[], int size);
 
 int main(int argc, const char * argv[]) {
     
-    const int SEARCH_FOR = 200;
+    const int SEARCH_FOR = 112;
+    const int ARRAY_SIZE = 10;
     
     bool foundInSearch;
-    int searchArray[10] = {-5, 3, 6, 10, 47, 100, 101, 110, 173, 200};
+    int searchArray[ARRAY_SIZE] = {-5, 3, 6, 10, 47, 100, 101, 110, 173, 200};
     
+    
+    /*
+     Part A
+     */
     cout << "Part A: Linear Search\nPrint of array being searched.\n";
-    printArray(searchArray, 10);
+    printArray(searchArray, ARRAY_SIZE);
     cout << "Looking for " << SEARCH_FOR << ": ";
-    foundInSearch = LinearSearch(searchArray, 10, SEARCH_FOR);
+    foundInSearch = LinearSearch(searchArray, ARRAY_SIZE, SEARCH_FOR);
     (foundInSearch) ? printf("%d was found!\n", SEARCH_FOR) : printf("%d was not found :(\n", SEARCH_FOR);
     
     
+    /*
+     Part B
+     */
     cout << "\n\nPart B: Iterative Binary Search\nPrint of array being searched.\n";
-    printArray(searchArray, 10);
+    printArray(searchArray, ARRAY_SIZE);
     cout << "Looking for " << SEARCH_FOR << ": ";
-    foundInSearch = IterBinarySearch(searchArray, 10, SEARCH_FOR);
+    foundInSearch = IterBinarySearch(searchArray, ARRAY_SIZE, SEARCH_FOR);
     (foundInSearch) ? printf("%d was found!\n", SEARCH_FOR) : printf("%d was not found :(\n", SEARCH_FOR);
     
+    
+    /*
+     Part C
+     */
     cout << "\n\nPart C: Recursive Binary Search\nPrint of array being searched.\n";
-    printArray(searchArray, 10);
+    printArray(searchArray, ARRAY_SIZE);
     cout << "Looking for " << SEARCH_FOR << ": ";
-    foundInSearch = RecursiveBinarySearch(searchArray, 0, 10, SEARCH_FOR);
+    foundInSearch = RecursiveBinarySearch(searchArray, 0, ARRAY_SIZE, SEARCH_FOR);
     (foundInSearch) ? printf("%d was found!\n", SEARCH_FOR) : printf("%d was not found :(\n", SEARCH_FOR);
     
     

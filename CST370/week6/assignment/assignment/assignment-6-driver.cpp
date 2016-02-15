@@ -3,7 +3,7 @@
  File: Driver for the Assignment
  Abstract: In this assignment a new algorithm called CoolSort is used.
  In the algorithm a sequences is supplied and used to break an array
- into smaller subsets that get sorted first. by the final sequence
+ into smaller subsets that get sorted first. By the final sequence
  the entire array will be sorted.
  Author: Matthew Bozelka
  ID: 002276039
@@ -58,6 +58,8 @@ void CoolSort(int arr[], int arrSize, int sequence[], int sequenceSize)
             }
             
         }
+        
+        // prints the array after each sort to show it is working correctly
         cout << "Sort after Sequence " << sequence[i] << ":\n";
         printArray(arr, arrSize);
     }

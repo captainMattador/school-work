@@ -19,11 +19,11 @@ void printArray(int arr[], int size);
 
 int main(int argc, const char * argv[]) {
 
-    const int ARRAY_SIZE = 10;
+    const int ARRAY_SIZE = 11;
     const int SEQUENCE_SIZE = 3;
     
     int H[SEQUENCE_SIZE] = {5, 2, 1};
-    int sortArr[ARRAY_SIZE] = {2, 5, 9, 4, 10, 7, 8, 1, 11, 5};
+    int sortArr[ARRAY_SIZE] = {2, 5, 9, 4, 10, 7, 8, 1, 11, 5, -3};
     
     cout << "Unsorted Array:\n";
     printArray(sortArr, ARRAY_SIZE);
